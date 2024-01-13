@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "rest-api"
+version = "0.1.0"
+description = "rest api conception using FastAPI"
+authors = ["KondratovaLudmila <137877876+KondratovaLudmila@users.noreply.github.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.108.0"
+sqlalchemy = "^2.0.25"
+psycopg2 = "^2.9.9"
+pydantic = {extras = ["email"], version = "^2.5.3"}
+uvicorn = {extras = ["standart"], version = "^0.25.0"}
+alembic = "^1.13.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
