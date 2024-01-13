@@ -75,6 +75,7 @@ class ContactRepo:
 
         return contact
 
+
     async def get_birthdays(self, days: int) -> List[Contact]:
         delta = timedelta(days=days)
         start_date = date.today()
@@ -91,8 +92,6 @@ class ContactRepo:
         return contacts
         
         
-
-
     async def get_unique_contact(self, contact: ContactModel):
         cont = self.db.query(Contact).filter_by(first_name = contact.first_name,
                                                  last_name = contact.last_name,
