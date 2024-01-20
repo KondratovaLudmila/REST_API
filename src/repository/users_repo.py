@@ -3,7 +3,7 @@ from sqlalchemy.orm import Session
 
 from src.models.user import User
 from src.schemas.user_schema import UserModel, UserUpdatePassword
-from src.dependencies.password_handler import pwd_handler
+from src.servises.password_handler import pwd_handler
 
 
 

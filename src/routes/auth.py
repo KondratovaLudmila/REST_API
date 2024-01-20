@@ -8,7 +8,7 @@ from sqlalchemy.orm import Session
 
 from src.dependencies.db import get_db
 from src.servises.auth import auth_token
-from src.dependencies.password_handler import pwd_handler
+from src.servises.password_handler import pwd_handler
 from src.repository.users_repo import UserRepo
 from src.schemas.user_schema import UserModel, UserResponse, TokenModel
 
