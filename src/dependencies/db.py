@@ -7,6 +7,9 @@ from pathlib import Path
 import configparser
 
 
+from ..models.user import Base
+
+
 config_path = Path(__file__).parent.parent.joinpath('conf', 'config.ini')
 config = configparser.ConfigParser()
 config.read(config_path)
@@ -21,8 +24,6 @@ SQLALCHEMY_DATABASE_URL = f"postgresql+psycopg2://{user}:{password}@{host}:{port
 engine = create_engine(SQLALCHEMY_DATABASE_URL, echo=True)
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
-
-Base = declarative_base()
 
 # Dependency
 def get_db():

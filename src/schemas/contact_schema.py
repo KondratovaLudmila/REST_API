@@ -1,6 +1,8 @@
 from pydantic import BaseModel, PastDate, Field, EmailStr
 from datetime import datetime
 
+from .user_schema import UserResponse
+
 
 class ContactModel(BaseModel):
     first_name: str = Field(max_length=30)
@@ -19,6 +21,7 @@ class ContactResponse(ContactModel):
     phone: str
     birth_date: PastDate | None
     description: str | None
+    user: UserResponse
     created_at: datetime
     updated_at: datetime
 

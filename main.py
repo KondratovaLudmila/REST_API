@@ -3,14 +3,15 @@ from fastapi import FastAPI, Depends, HTTPException
 from sqlalchemy.orm import Session
 from sqlalchemy import text
 
-from src.database.db import get_db
-from src.routes import contacts
+from src.dependencies.db import get_db
+from src.routes import contacts, auth
 
 app = FastAPI()
 
 app.include_router(contacts.router, prefix='/api')
+app.include_router(auth.router, prefix='/api')
 
-@app.post("/api/halthchecker")
+@app.post("/halthchecker")
 async def halthchecker(db: Session=Depends(get_db)):
     try:
         result = db.execute(text('SELECT 1')).fetchone()
