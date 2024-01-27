@@ -18,6 +18,11 @@ python-jose = {extras = ["cryptography"], version = "^3.3.0"}
 passlib = {extras = ["bcrypt"], version = "^1.7.4"}
 python-dotenv = "^1.0.0"
 python-multipart = "^0.0.6"
+pydantic-settings = "^2.1.0"
+fastapi-mail = "^1.4.1"
+cloudinary = "^1.38.0"
+fastapi-limiter = "^0.1.6"
+redis = "^5.0.1"
 
 
 [build-system]
