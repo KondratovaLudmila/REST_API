@@ -10,7 +10,7 @@ class Contact(BaseModel):
     last_name = Column(String(50))
     email = Column(String(30))
     phone = Column(String(25))
-    birth_date = Column(Date)
+    birth_date = Column(Date())
     description = Column(String())
     user_id = Column('user_id', ForeignKey('users.id', ondelete='CASCADE'), nullable=False)
     user = relationship('User', back_populates='contacts')

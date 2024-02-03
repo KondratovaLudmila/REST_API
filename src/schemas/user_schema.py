@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Field, EmailStr
+from pydantic import BaseModel, EmailStr
 from datetime import datetime
 
 
@@ -15,7 +15,7 @@ class UserResponse(BaseModel):
     updated_at: datetime
 
     class Config:
-        from_attriutes = True
+        from_attributes = True
 
 class UserCreatedResponse(BaseModel):
     user: UserResponse

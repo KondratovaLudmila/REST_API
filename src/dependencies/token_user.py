@@ -6,7 +6,7 @@ from fastapi import Depends, HTTPException, status
 from sqlalchemy.orm import Session
 
 from src.dependencies.db import get_db
-from src.servises.auth import auth_token
+from src.services.auth import auth_token
 from src.repository.users_repo import UserRepo
 from src.models.user import User
 from src.dependencies.cache import get_cache
